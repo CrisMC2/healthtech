@@ -139,7 +139,6 @@ describe('Header Component', () => {
 
     // Mock window.location.href
     const originalLocation = window.location;
-    delete (window as unknown as { location: Location }).location;
     Object.defineProperty(window, 'location', {
       value: { ...originalLocation, href: '' },
       writable: true,
@@ -150,7 +149,6 @@ describe('Header Component', () => {
     fireEvent.click(sobreNosotrosLink);
 
     // Restaurar
-    delete (window as unknown as { location: Location }).location;
     Object.defineProperty(window, 'location', {
       value: originalLocation,
       writable: true,

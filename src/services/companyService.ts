@@ -11,7 +11,7 @@ import type {
 // Servicio para gestión de empresas HealthTech
 class CompanyService {
   private endpoint = '/companies';
-  private cache: Map<string, { data: any; timestamp: number }> = new Map();
+  private cache: Map<string, { data: unknown; timestamp: number }> = new Map();
   private CACHE_DURATION = 5 * 60 * 1000; // 5 minutos
 
   // Obtener todas las empresas con paginación y filtros
@@ -80,9 +80,7 @@ class CompanyService {
         return cachedData as Company[];
       }
 
-      const response = await apiClient.get<ApiResponse<Company[]>>(
-        `${this.endpoint}/featured`
-      );
+      const response = await apiClient.get<ApiResponse<Company[]>>(`${this.endpoint}/featured`);
 
       this.saveToCache(cacheKey, response.data.data);
       return response.data.data;
@@ -122,7 +120,7 @@ class CompanyService {
   }
 
   // Funciones de cache privadas
-  private getFromCache(key: string): any | null {
+  private getFromCache(key: string): unknown | null {
     const cached = this.cache.get(key);
     if (!cached) return null;
 
@@ -135,7 +133,7 @@ class CompanyService {
     return cached.data;
   }
 
-  private saveToCache(key: string, data: any): void {
+  private saveToCache(key: string, data: unknown): void {
     this.cache.set(key, {
       data,
       timestamp: Date.now(),

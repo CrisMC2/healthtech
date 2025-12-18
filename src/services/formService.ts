@@ -1,10 +1,5 @@
 import apiClient, { handleApiError } from './api';
-import type {
-  AffiliationForm,
-  ContactForm,
-  NewsletterSubscription,
-  ApiResponse,
-} from '../types';
+import type { AffiliationForm, ContactForm, NewsletterSubscription, ApiResponse } from '../types';
 
 class FormService {
   // Enviar formulario de afiliación
@@ -12,10 +7,7 @@ class FormService {
     formData: AffiliationForm
   ): Promise<{ success: boolean; message: string }> {
     try {
-      const response = await apiClient.post<ApiResponse<any>>(
-        '/affiliation',
-        formData
-      );
+      const response = await apiClient.post<ApiResponse<unknown>>('/affiliation', formData);
       return {
         success: response.data.success,
         message: response.data.message || 'Solicitud enviada exitosamente',
@@ -27,24 +19,17 @@ class FormService {
   }
 
   // Subir archivos para el formulario de afiliación
-  async uploadFile(
-    file: File,
-    type: 'logo' | 'pitch'
-  ): Promise<{ url: string }> {
+  async uploadFile(file: File, type: 'logo' | 'pitch'): Promise<{ url: string }> {
     try {
       const formData = new FormData();
       formData.append('file', file);
       formData.append('type', type);
 
-      const response = await apiClient.post<ApiResponse<{ url: string }>>(
-        '/upload',
-        formData,
-        {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
-        }
-      );
+      const response = await apiClient.post<ApiResponse<{ url: string }>>('/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
       return response.data.data;
     } catch (error) {
       const message = handleApiError(error);
@@ -53,14 +38,9 @@ class FormService {
   }
 
   // Enviar formulario de contacto
-  async submitContactForm(
-    formData: ContactForm
-  ): Promise<{ success: boolean; message: string }> {
+  async submitContactForm(formData: ContactForm): Promise<{ success: boolean; message: string }> {
     try {
-      const response = await apiClient.post<ApiResponse<any>>(
-        '/contact',
-        formData
-      );
+      const response = await apiClient.post<ApiResponse<unknown>>('/contact', formData);
       return {
         success: response.data.success,
         message: response.data.message || 'Mensaje enviado exitosamente',
@@ -76,7 +56,7 @@ class FormService {
     subscription: NewsletterSubscription
   ): Promise<{ success: boolean; message: string }> {
     try {
-      const response = await apiClient.post<ApiResponse<any>>(
+      const response = await apiClient.post<ApiResponse<unknown>>(
         '/newsletter/subscribe',
         subscription
       );

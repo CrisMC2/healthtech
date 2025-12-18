@@ -139,14 +139,23 @@ describe('Header Component', () => {
 
     // Mock window.location.href
     const originalLocation = window.location;
-    delete (window as any).location;
-    window.location = { ...originalLocation, href: '' } as Location;
+    delete (window as unknown as { location: Location }).location;
+    Object.defineProperty(window, 'location', {
+      value: { ...originalLocation, href: '' },
+      writable: true,
+      configurable: true,
+    });
 
     const sobreNosotrosLink = screen.getAllByText('Sobre Nosotros')[0];
     fireEvent.click(sobreNosotrosLink);
 
     // Restaurar
-    window.location = originalLocation;
+    delete (window as unknown as { location: Location }).location;
+    Object.defineProperty(window, 'location', {
+      value: originalLocation,
+      writable: true,
+      configurable: true,
+    });
   });
 
   it('muestra el overlay móvil cuando el menú está abierto', () => {

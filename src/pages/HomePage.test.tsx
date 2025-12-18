@@ -43,16 +43,12 @@ describe('HomePage Component', () => {
 
   it('muestra el título de bienvenida', () => {
     renderHomePage();
-    expect(
-      screen.getByText(/Bienvenidos al Ecosistema HealthTech del Perú/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Bienvenidos al Ecosistema HealthTech del Perú/i)).toBeInTheDocument();
   });
 
   it('muestra la descripción del ecosistema', () => {
     renderHomePage();
-    expect(
-      screen.getByText(/Nuestro país representa una gran oportunidad/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Nuestro país representa una gran oportunidad/i)).toBeInTheDocument();
   });
 
   it('renderiza los 4 pilares principales', () => {
@@ -111,9 +107,7 @@ describe('HomePage Component', () => {
 
     // Click para expandir
     fireEvent.click(directivaButton);
-    expect(
-      screen.getByText(/Nuestra directiva está conformada por líderes/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Nuestra directiva está conformada por líderes/i)).toBeInTheDocument();
 
     // Click para colapsar
     fireEvent.click(directivaButton);

@@ -52,11 +52,10 @@ const PartnersSection = () => {
       <div className="partners-container">
         <div className={`partners-header ${isVisible ? 'visible' : ''}`}>
           <span className="partners-badge">Ecosistema</span>
-          <h2 className="partners-title">
-            Empresas que están transformando la salud en Perú
-          </h2>
+          <h2 className="partners-title">Empresas que están transformando la salud en Perú</h2>
           <p className="partners-description">
-            Más de 50 empresas confían en HealthTech Perú como su plataforma de conexión y crecimiento
+            Más de 50 empresas confían en HealthTech Perú como su plataforma de conexión y
+            crecimiento
           </p>
         </div>
 
@@ -82,9 +81,7 @@ const PartnersSection = () => {
         </div>
 
         <div className={`partners-footer ${isVisible ? 'visible' : ''}`}>
-          <p className="partners-count">
-            + 50 empresas más formando parte del ecosistema
-          </p>
+          <p className="partners-count">+ 50 empresas más formando parte del ecosistema</p>
           <a href="/directorio" className="btn-partners-cta">
             Ver directorio completo
           </a>

@@ -5,7 +5,8 @@ export const mockCompanies: Company[] = [
   {
     id: '1',
     nombre: 'TeleMed Perú',
-    descripcion: 'Plataforma de telemedicina que conecta pacientes con médicos especialistas mediante videoconsultas seguras y expedientes médicos digitales.',
+    descripcion:
+      'Plataforma de telemedicina que conecta pacientes con médicos especialistas mediante videoconsultas seguras y expedientes médicos digitales.',
     logo: '',
     categorias: ['telemedicina', 'gestion-hospitalaria'],
     etapaDesarrollo: 'Growth',
@@ -22,7 +23,8 @@ export const mockCompanies: Company[] = [
   {
     id: '2',
     nombre: 'HealthAI Diagnostics',
-    descripcion: 'Solución de inteligencia artificial para análisis de imágenes médicas y apoyo en diagnóstico clínico con precisión del 95%.',
+    descripcion:
+      'Solución de inteligencia artificial para análisis de imágenes médicas y apoyo en diagnóstico clínico con precisión del 95%.',
     logo: '',
     categorias: ['ia-diagnostico'],
     etapaDesarrollo: 'Early Stage',
@@ -38,7 +40,8 @@ export const mockCompanies: Company[] = [
   {
     id: '3',
     nombre: 'MindWell',
-    descripcion: 'Aplicación de salud mental que ofrece terapia online, meditación guiada y seguimiento del bienestar emocional.',
+    descripcion:
+      'Aplicación de salud mental que ofrece terapia online, meditación guiada y seguimiento del bienestar emocional.',
     logo: '',
     categorias: ['salud-mental'],
     etapaDesarrollo: 'Seed',
@@ -55,7 +58,8 @@ export const mockCompanies: Company[] = [
   {
     id: '4',
     nombre: 'FarmaExpress',
-    descripcion: 'Plataforma e-commerce de productos farmacéuticos con receta electrónica y delivery en 24 horas.',
+    descripcion:
+      'Plataforma e-commerce de productos farmacéuticos con receta electrónica y delivery en 24 horas.',
     logo: '',
     categorias: ['farmacia-digital'],
     etapaDesarrollo: 'Consolidada',
@@ -73,7 +77,8 @@ export const mockCompanies: Company[] = [
   {
     id: '5',
     nombre: 'SmartHealth Devices',
-    descripcion: 'Dispositivos wearables para monitoreo de signos vitales y adherencia a tratamientos médicos.',
+    descripcion:
+      'Dispositivos wearables para monitoreo de signos vitales y adherencia a tratamientos médicos.',
     logo: '',
     categorias: ['dispositivos-inteligentes'],
     etapaDesarrollo: 'Growth',
@@ -89,7 +94,8 @@ export const mockCompanies: Company[] = [
   {
     id: '6',
     nombre: 'HospitalOS',
-    descripcion: 'Sistema integral de gestión hospitalaria que incluye agendamiento de citas, historias clínicas electrónicas y gestión de recursos.',
+    descripcion:
+      'Sistema integral de gestión hospitalaria que incluye agendamiento de citas, historias clínicas electrónicas y gestión de recursos.',
     logo: '',
     categorias: ['gestion-hospitalaria', 'analisis-datos'],
     etapaDesarrollo: 'Consolidada',
@@ -109,7 +115,8 @@ export const mockEvents: Event[] = [
   {
     id: '1',
     titulo: 'HealthTech Summit Perú 2025',
-    descripcion: 'Conferencia anual que reúne a los principales actores del ecosistema HealthTech en Perú para discutir tendencias, regulación e innovación.',
+    descripcion:
+      'Conferencia anual que reúne a los principales actores del ecosistema HealthTech en Perú para discutir tendencias, regulación e innovación.',
     fecha: '2025-11-15',
     modalidad: 'Híbrido',
     tipo: 'Conferencia',
@@ -136,7 +143,8 @@ export const mockEvents: Event[] = [
   {
     id: '2',
     titulo: 'Webinar: IA en Diagnóstico Médico',
-    descripcion: 'Sesión online sobre las últimas tendencias en inteligencia artificial aplicada al diagnóstico médico.',
+    descripcion:
+      'Sesión online sobre las últimas tendencias en inteligencia artificial aplicada al diagnóstico médico.',
     fecha: '2025-10-20',
     modalidad: 'Virtual',
     tipo: 'Webinar',
@@ -160,7 +168,8 @@ export const mockBlogArticles: BlogArticle[] = [
   {
     id: '1',
     titulo: 'El futuro de la telemedicina en Perú',
-    resumen: 'Exploramos las tendencias y oportunidades de la telemedicina en el mercado peruano post-pandemia.',
+    resumen:
+      'Exploramos las tendencias y oportunidades de la telemedicina en el mercado peruano post-pandemia.',
     contenido: 'Contenido completo del artículo...',
     imagenDestacada: '',
     autor: 'Ana Torres',
@@ -172,7 +181,8 @@ export const mockBlogArticles: BlogArticle[] = [
   {
     id: '2',
     titulo: 'Regulación de dispositivos médicos digitales en Perú',
-    resumen: 'Guía completa sobre el marco regulatorio peruano para dispositivos médicos inteligentes y wearables.',
+    resumen:
+      'Guía completa sobre el marco regulatorio peruano para dispositivos médicos inteligentes y wearables.',
     contenido: 'Contenido completo del artículo...',
     imagenDestacada: '',
     autor: 'Ing. Luis Ramírez',
@@ -200,7 +210,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'telemedicina',
     nombre: 'Telemedicina y Consulta Virtual',
-    descripcion: 'Plataformas que conectan pacientes con profesionales de salud mediante videoconsulta, chat médico y diagnóstico remoto.',
+    descripcion:
+      'Plataformas que conectan pacientes con profesionales de salud mediante videoconsulta, chat médico y diagnóstico remoto.',
     icono: 'video',
     ejemplos: ['Videoconsulta médica', 'Chat con especialistas', 'Recetas electrónicas'],
     casosDeUso: [
@@ -216,7 +227,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'gestion-hospitalaria',
     nombre: 'Gestión Hospitalaria y Clínica',
-    descripcion: 'Software para administración de centros de salud, agendamiento de citas y gestión de historias clínicas electrónicas.',
+    descripcion:
+      'Software para administración de centros de salud, agendamiento de citas y gestión de historias clínicas electrónicas.',
     icono: 'building',
     ejemplos: ['Sistemas HIS', 'Agendamiento online', 'Gestión de recursos'],
     casosDeUso: [
@@ -232,7 +244,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'dispositivos-inteligentes',
     nombre: 'Dispositivos Médicos Inteligentes',
-    descripcion: 'Tecnología wearable y dispositivos IoT para monitoreo de signos vitales y adherencia a tratamientos.',
+    descripcion:
+      'Tecnología wearable y dispositivos IoT para monitoreo de signos vitales y adherencia a tratamientos.',
     icono: 'watch',
     ejemplos: ['Smartwatches médicos', 'Monitores IoT', 'Sensores de adherencia'],
     casosDeUso: [
@@ -244,7 +257,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'ia-diagnostico',
     nombre: 'Inteligencia Artificial en Diagnóstico',
-    descripcion: 'Soluciones de machine learning para análisis de imágenes médicas y apoyo a diagnóstico clínico.',
+    descripcion:
+      'Soluciones de machine learning para análisis de imágenes médicas y apoyo a diagnóstico clínico.',
     icono: 'brain',
     ejemplos: ['Análisis de radiografías', 'Detección de cáncer', 'Predicción de riesgos'],
     casosDeUso: [
@@ -256,7 +270,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'salud-mental',
     nombre: 'Salud Mental Digital',
-    descripcion: 'Aplicaciones de terapia online, meditación guiada y seguimiento de bienestar emocional.',
+    descripcion:
+      'Aplicaciones de terapia online, meditación guiada y seguimiento de bienestar emocional.',
     icono: 'heart',
     ejemplos: ['Terapia online', 'Apps de meditación', 'Seguimiento emocional'],
     casosDeUso: [
@@ -268,7 +283,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'farmacia-digital',
     nombre: 'Farmacia Digital y Delivery',
-    descripcion: 'Plataformas e-commerce especializadas en productos farmacéuticos con receta electrónica.',
+    descripcion:
+      'Plataformas e-commerce especializadas en productos farmacéuticos con receta electrónica.',
     icono: 'pill',
     ejemplos: ['E-commerce farmacéutico', 'Receta electrónica', 'Delivery express'],
     casosDeUso: [
@@ -280,7 +296,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'analisis-datos',
     nombre: 'Análisis de Datos en Salud',
-    descripcion: 'Business intelligence para instituciones de salud, análisis epidemiológico y gestión de recursos sanitarios.',
+    descripcion:
+      'Business intelligence para instituciones de salud, análisis epidemiológico y gestión de recursos sanitarios.',
     icono: 'chart',
     ejemplos: ['Dashboards clínicos', 'Analytics predictivo', 'Epidemiología'],
     casosDeUso: [
@@ -292,7 +309,8 @@ export const categoryInfo: CategoryInfo[] = [
   {
     id: 'seguros-financiamiento',
     nombre: 'Seguros y Financiamiento de Salud',
-    descripcion: 'Insurtech enfocadas en microseguros de salud y financiamiento de tratamientos médicos.',
+    descripcion:
+      'Insurtech enfocadas en microseguros de salud y financiamiento de tratamientos médicos.',
     icono: 'shield',
     ejemplos: ['Microseguros', 'Financiamiento médico', 'Planes personalizados'],
     casosDeUso: [

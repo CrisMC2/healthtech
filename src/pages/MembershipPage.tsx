@@ -10,7 +10,7 @@ import {
   TrendingUp,
   Network,
   FileText,
-  Award
+  Award,
 } from 'lucide-react';
 import { useState } from 'react';
 import './MembershipPage.css';
@@ -44,8 +44,8 @@ const MembershipPage = () => {
         'Newsletter mensual del sector',
         'Acceso al directorio de miembros',
         'Participación en grupos de WhatsApp',
-        'Descuentos en eventos pagos'
-      ]
+        'Descuentos en eventos pagos',
+      ],
     },
     {
       id: 'startup',
@@ -64,8 +64,8 @@ const MembershipPage = () => {
         'Perfil destacado en directorio',
         'Participación en Pitch Competitions',
         'Consultas sobre regulación (2 por año)',
-        'Toolkit completo para startups'
-      ]
+        'Toolkit completo para startups',
+      ],
     },
     {
       id: 'corporativa',
@@ -84,8 +84,8 @@ const MembershipPage = () => {
         'Conexión directa con hospitales',
         '5 membresías individuales incluidas',
         'Logo en sitio web y materiales',
-        'Participación en comités de trabajo'
-      ]
+        'Participación en comités de trabajo',
+      ],
     },
     {
       id: 'aliados',
@@ -103,65 +103,70 @@ const MembershipPage = () => {
         'Capacitación corporativa',
         'Conexión con startups para pilotos',
         'Asesoría especializada',
-        'Eventos privados'
-      ]
-    }
+        'Eventos privados',
+      ],
+    },
   ];
 
   const generalBenefits = [
     {
       icon: <Network />,
       title: 'Networking Exclusivo',
-      description: 'Conecta con emprendedores, inversionistas y líderes del sector'
+      description: 'Conecta con emprendedores, inversionistas y líderes del sector',
     },
     {
       icon: <GraduationCap />,
       title: 'Academia Especializada',
-      description: 'Acceso a cursos, webinars y certificaciones en HealthTech'
+      description: 'Acceso a cursos, webinars y certificaciones en HealthTech',
     },
     {
       icon: <FileText />,
       title: 'Recursos Regulatorios',
-      description: 'Guías, templates y soporte para navegar el marco regulatorio'
+      description: 'Guías, templates y soporte para navegar el marco regulatorio',
     },
     {
       icon: <Calendar />,
       title: 'Eventos Prioritarios',
-      description: 'Acceso preferencial y descuentos en todos nuestros eventos'
+      description: 'Acceso preferencial y descuentos en todos nuestros eventos',
     },
     {
       icon: <TrendingUp />,
       title: 'Oportunidades de Crecimiento',
-      description: 'Acceso a inversionistas, programas de aceleración y pilotos'
+      description: 'Acceso a inversionistas, programas de aceleración y pilotos',
     },
     {
       icon: <Award />,
       title: 'Visibilidad y Credibilidad',
-      description: 'Posiciona tu marca en el ecosistema HealthTech del Perú'
-    }
+      description: 'Posiciona tu marca en el ecosistema HealthTech del Perú',
+    },
   ];
 
   const faqs = [
     {
       question: '¿Puedo cambiar de plan en cualquier momento?',
-      answer: 'Sí, puedes actualizar tu membresía en cualquier momento. El cambio se aplicará inmediatamente y pagarás la diferencia prorrateada.'
+      answer:
+        'Sí, puedes actualizar tu membresía en cualquier momento. El cambio se aplicará inmediatamente y pagarás la diferencia prorrateada.',
     },
     {
       question: '¿La membresía se renueva automáticamente?',
-      answer: 'Sí, las membresías se renuevan automáticamente cada año. Puedes cancelar en cualquier momento sin penalización.'
+      answer:
+        'Sí, las membresías se renuevan automáticamente cada año. Puedes cancelar en cualquier momento sin penalización.',
     },
     {
       question: '¿Ofrecen descuentos para startups en etapa temprana?',
-      answer: 'Sí, ofrecemos descuentos especiales para startups pre-seed y seed. Contáctanos para más información sobre nuestros programas de apoyo.'
+      answer:
+        'Sí, ofrecemos descuentos especiales para startups pre-seed y seed. Contáctanos para más información sobre nuestros programas de apoyo.',
     },
     {
       question: '¿Qué incluye el acceso a la Academia HealthTech?',
-      answer: 'Acceso a todos nuestros cursos online, webinars en vivo, material descargable y certificaciones en temas de regulación, inversión, validación clínica y más.'
+      answer:
+        'Acceso a todos nuestros cursos online, webinars en vivo, material descargable y certificaciones en temas de regulación, inversión, validación clínica y más.',
     },
     {
       question: '¿Puedo asistir a eventos si soy miembro básico?',
-      answer: 'Sí, los miembros básicos pueden asistir a eventos seleccionados y reciben descuentos en eventos pagos. Miembros premium tienen acceso completo.'
-    }
+      answer:
+        'Sí, los miembros básicos pueden asistir a eventos seleccionados y reciben descuentos en eventos pagos. Miembros premium tienen acceso completo.',
+    },
   ];
 
   return (
@@ -191,9 +196,7 @@ const MembershipPage = () => {
                 className={`tier-card ${tier.popular ? 'popular' : ''} ${selectedTier === tier.id ? 'selected' : ''}`}
                 onClick={() => setSelectedTier(tier.id)}
               >
-                {tier.popular && (
-                  <div className="popular-badge">Más Popular</div>
-                )}
+                {tier.popular && <div className="popular-badge">Más Popular</div>}
 
                 <div className="tier-icon-wrapper" style={{ backgroundColor: tier.color }}>
                   {tier.icon}
@@ -216,10 +219,7 @@ const MembershipPage = () => {
                   ))}
                 </div>
 
-                <button
-                  className="btn-join"
-                  style={{ backgroundColor: tier.color }}
-                >
+                <button className="btn-join" style={{ backgroundColor: tier.color }}>
                   {tier.price === 'A medida' ? 'Contactar' : 'Unirme Ahora'}
                 </button>
               </div>
@@ -235,9 +235,7 @@ const MembershipPage = () => {
           <div className="general-benefits-grid">
             {generalBenefits.map((benefit, index) => (
               <div key={index} className="general-benefit-card">
-                <div className="general-benefit-icon">
-                  {benefit.icon}
-                </div>
+                <div className="general-benefit-icon">{benefit.icon}</div>
                 <h4>{benefit.title}</h4>
                 <p>{benefit.description}</p>
               </div>
@@ -298,9 +296,7 @@ const MembershipPage = () => {
               Completa el formulario de afiliación y comienza a disfrutar de todos los beneficios
             </p>
             <div className="cta-buttons">
-              <button className="btn-membership-cta primary">
-                Iniciar Proceso de Afiliación
-              </button>
+              <button className="btn-membership-cta primary">Iniciar Proceso de Afiliación</button>
               <a href="/contacto" className="btn-membership-cta secondary">
                 Contactar para Más Información
               </a>

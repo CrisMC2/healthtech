@@ -112,9 +112,7 @@ describe('ContactPage Component', () => {
     fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(alertSpy).toHaveBeenCalledWith(
-        'Gracias por contactarnos. Te responderemos pronto.'
-      );
+      expect(alertSpy).toHaveBeenCalledWith('Gracias por contactarnos. Te responderemos pronto.');
     });
 
     alertSpy.mockRestore();

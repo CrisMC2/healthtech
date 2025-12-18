@@ -47,8 +47,8 @@ const Footer = () => {
               <span className="footer-logo-name">HealthTech Perú</span>
             </Link>
             <p className="footer-description">
-              Impulsando la transformación digital de la salud en Perú mediante
-              la articulación del ecosistema de tecnología aplicada a la salud.
+              Impulsando la transformación digital de la salud en Perú mediante la articulación del
+              ecosistema de tecnología aplicada a la salud.
             </p>
             <div className="social-links">
               <a
@@ -83,11 +83,21 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-heading">Enlaces Rápidos</h3>
             <ul className="footer-links">
-              <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/ecosistema">Ecosistema</Link></li>
-              <li><Link to="/directorio">Directorio</Link></li>
-              <li><Link to="/eventos">Eventos</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
+              <li>
+                <Link to="/">Inicio</Link>
+              </li>
+              <li>
+                <Link to="/ecosistema">Ecosistema</Link>
+              </li>
+              <li>
+                <Link to="/directorio">Directorio</Link>
+              </li>
+              <li>
+                <Link to="/eventos">Eventos</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
             </ul>
           </div>
 
@@ -95,11 +105,21 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-heading">Recursos</h3>
             <ul className="footer-links">
-              <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
-              <li><Link to="/afiliacion">Únete</Link></li>
-              <li><Link to="/contacto">Contacto</Link></li>
-              <li><Link to="/recursos">Guías y Herramientas</Link></li>
-              <li><Link to="/prensa">Prensa</Link></li>
+              <li>
+                <Link to="/sobre-nosotros">Sobre Nosotros</Link>
+              </li>
+              <li>
+                <Link to="/afiliacion">Únete</Link>
+              </li>
+              <li>
+                <Link to="/contacto">Contacto</Link>
+              </li>
+              <li>
+                <Link to="/recursos">Guías y Herramientas</Link>
+              </li>
+              <li>
+                <Link to="/prensa">Prensa</Link>
+              </li>
             </ul>
           </div>
 
@@ -130,7 +150,9 @@ const Footer = () => {
                 </button>
               </div>
               {message && (
-                <p className={`newsletter-message ${message.includes('Error') ? 'error' : 'success'}`}>
+                <p
+                  className={`newsletter-message ${message.includes('Error') ? 'error' : 'success'}`}
+                >
                   {message}
                 </p>
               )}

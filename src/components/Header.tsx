@@ -78,11 +78,7 @@ const Header = () => {
           </div>
 
           {/* Botón menú móvil */}
-          <button
-            className="mobile-menu-button"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
+          <button className="mobile-menu-button" onClick={toggleMenu} aria-label="Toggle menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -108,11 +104,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="mobile-cta">
-            <Link
-              to="/miembros"
-              className="btn-mobile-cta"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Link to="/miembros" className="btn-mobile-cta" onClick={() => setIsMenuOpen(false)}>
               Únete al Ecosistema
             </Link>
           </div>
@@ -120,9 +112,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Overlay */}
-      {isMenuOpen && (
-        <div className="mobile-overlay" onClick={() => setIsMenuOpen(false)}></div>
-      )}
+      {isMenuOpen && <div className="mobile-overlay" onClick={() => setIsMenuOpen(false)}></div>}
     </header>
   );
 };

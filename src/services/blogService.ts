@@ -40,9 +40,7 @@ class BlogService {
   // Obtener un artículo por ID
   async getArticleById(id: string): Promise<BlogArticle> {
     try {
-      const response = await apiClient.get<ApiResponse<BlogArticle>>(
-        `${this.endpoint}/${id}`
-      );
+      const response = await apiClient.get<ApiResponse<BlogArticle>>(`${this.endpoint}/${id}`);
 
       // Incrementar contador de vistas
       this.incrementViews(id).catch(() => {});
@@ -57,9 +55,7 @@ class BlogService {
   // Obtener artículos destacados
   async getFeaturedArticles(): Promise<BlogArticle[]> {
     try {
-      const response = await apiClient.get<ApiResponse<BlogArticle[]>>(
-        `${this.endpoint}/featured`
-      );
+      const response = await apiClient.get<ApiResponse<BlogArticle[]>>(`${this.endpoint}/featured`);
       return response.data.data;
     } catch (error) {
       const message = handleApiError(error);

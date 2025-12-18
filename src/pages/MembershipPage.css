@@ -215,7 +215,7 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   text-align: center;
   transition: all 0.3s ease;
-  border-top: 3px solid #0066CC;
+  border-top: 3px solid #0066cc;
 }
 
 .general-benefit-card:hover {
@@ -227,7 +227,7 @@
   width: 60px;
   height: 60px;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, #0066CC 0%, #004d99 100%);
+  background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -257,7 +257,7 @@
 /* Stats */
 .membership-stats-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #0066CC 0%, #004d99 100%);
+  background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
   color: white;
 }
 
@@ -340,7 +340,7 @@
 /* CTA Section */
 .membership-cta-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #0066CC 0%, #004d99 100%);
+  background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
 }
 
 .membership-cta-box {
@@ -387,7 +387,7 @@
 
 .btn-membership-cta.primary {
   background: white;
-  color: #0066CC;
+  color: #0066cc;
 }
 
 .btn-membership-cta.primary:hover {
@@ -404,7 +404,7 @@
 
 .btn-membership-cta.secondary:hover {
   background: white;
-  color: #0066CC;
+  color: #0066cc;
   transform: translateY(-2px);
 }
 
@@ -444,7 +444,9 @@
     font-size: 1.25rem;
   }
 
-  .section-header h2, .benefits-title, .faq-title {
+  .section-header h2,
+  .benefits-title,
+  .faq-title {
     font-size: 2rem;
   }
 

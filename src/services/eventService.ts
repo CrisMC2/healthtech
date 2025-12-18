@@ -55,9 +55,7 @@ class EventService {
   // Obtener próximos eventos
   async getUpcomingEvents(): Promise<Event[]> {
     try {
-      const response = await apiClient.get<ApiResponse<Event[]>>(
-        `${this.endpoint}/upcoming`
-      );
+      const response = await apiClient.get<ApiResponse<Event[]>>(`${this.endpoint}/upcoming`);
       return response.data.data;
     } catch (error) {
       const message = handleApiError(error);
@@ -76,7 +74,7 @@ class EventService {
     }
   ): Promise<{ success: boolean; message: string }> {
     try {
-      const response = await apiClient.post<ApiResponse<any>>(
+      const response = await apiClient.post<ApiResponse<unknown>>(
         `${this.endpoint}/${eventId}/register`,
         participantData
       );

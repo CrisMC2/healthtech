@@ -135,8 +135,8 @@ const CategoriesSection = () => {
             <span className="categories-title-gradient"> HealthTech</span>
           </h2>
           <p className="categories-description">
-            Descubre las diferentes verticales de tecnología en salud que están transformando
-            el sector médico en Perú
+            Descubre las diferentes verticales de tecnología en salud que están transformando el
+            sector médico en Perú
           </p>
         </div>
 
@@ -149,10 +149,7 @@ const CategoriesSection = () => {
               style={{ animationDelay: `${index * 0.08}s` }}
             >
               <div className="category-icon-wrapper">
-                <div
-                  className="category-icon"
-                  style={{ background: category.gradient }}
-                >
+                <div className="category-icon" style={{ background: category.gradient }}>
                   {category.icon}
                 </div>
                 <div className="category-icon-glow" style={{ background: category.color }}></div>

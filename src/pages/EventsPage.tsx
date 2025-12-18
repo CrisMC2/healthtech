@@ -7,7 +7,7 @@ import {
   GraduationCap,
   Coffee,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
 } from 'lucide-react';
 import './EventsPage.css';
 
@@ -36,9 +36,10 @@ const EventsPage = () => {
       location: 'Centro de Convenciones, Lima',
       mode: 'Híbrido',
       capacity: '500+ asistentes',
-      description: 'El evento anual más importante del ecosistema HealthTech peruano. Conecta con emprendedores, inversionistas, reguladores y líderes de la industria.',
+      description:
+        'El evento anual más importante del ecosistema HealthTech peruano. Conecta con emprendedores, inversionistas, reguladores y líderes de la industria.',
       status: 'Inscripción Abierta',
-      icon: <Trophy />
+      icon: <Trophy />,
     },
     {
       id: '2',
@@ -49,9 +50,10 @@ const EventsPage = () => {
       location: 'Online - Zoom',
       mode: 'Virtual',
       capacity: '100 participantes',
-      description: 'Aprende sobre los requisitos regulatorios de DIGEMID para aplicaciones móviles de salud y dispositivos médicos digitales.',
+      description:
+        'Aprende sobre los requisitos regulatorios de DIGEMID para aplicaciones móviles de salud y dispositivos médicos digitales.',
       status: 'Próximo',
-      icon: <GraduationCap />
+      icon: <GraduationCap />,
     },
     {
       id: '3',
@@ -62,10 +64,11 @@ const EventsPage = () => {
       location: 'Hub de Innovación, San Isidro',
       mode: 'Presencial',
       capacity: '80 participantes',
-      description: 'Evento mensual de networking para conectar con otros emprendedores, profesionales de salud e inversionistas del ecosistema.',
+      description:
+        'Evento mensual de networking para conectar con otros emprendedores, profesionales de salud e inversionistas del ecosistema.',
       status: 'Inscripción Abierta',
-      icon: <Coffee />
-    }
+      icon: <Coffee />,
+    },
   ];
 
   const eventTypes = [
@@ -74,29 +77,29 @@ const EventsPage = () => {
       description: 'Evento anual flagship con conferencias, paneles y networking de alto nivel',
       frequency: 'Anual',
       icon: <Trophy />,
-      color: '#00a651'
+      color: '#00a651',
     },
     {
       name: 'Pitch Competitions',
       description: 'Competencias donde startups presentan sus soluciones ante inversionistas',
       frequency: 'Trimestral',
       icon: <Users />,
-      color: '#00a651'
+      color: '#00a651',
     },
     {
       name: 'Workshops Especializados',
       description: 'Capacitaciones sobre regulatorio, inversión, validación clínica y más',
       frequency: 'Mensual',
       icon: <GraduationCap />,
-      color: '#00a651'
+      color: '#00a651',
     },
     {
       name: 'Networking Nights',
       description: 'Encuentros informales para construir relaciones en el ecosistema',
       frequency: 'Mensual',
       icon: <Coffee />,
-      color: '#00a651'
-    }
+      color: '#00a651',
+    },
   ];
 
   return (
@@ -128,13 +131,18 @@ const EventsPage = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="event-header">
-                  <div className="event-type-badge" style={{ backgroundColor: `${eventTypes.find(t => t.name.includes(event.type.split(' ')[0]))?.color || '#718096'}15` }}>
-                    <div className="event-icon">
-                      {event.icon}
-                    </div>
+                  <div
+                    className="event-type-badge"
+                    style={{
+                      backgroundColor: `${eventTypes.find((t) => t.name.includes(event.type.split(' ')[0]))?.color || '#718096'}15`,
+                    }}
+                  >
+                    <div className="event-icon">{event.icon}</div>
                     <span>{event.type}</span>
                   </div>
-                  <div className={`event-status-badge ${event.status === 'Inscripción Abierta' ? 'open' : ''}`}>
+                  <div
+                    className={`event-status-badge ${event.status === 'Inscripción Abierta' ? 'open' : ''}`}
+                  >
                     {event.status === 'Inscripción Abierta' && <CheckCircle size={16} />}
                     {event.status}
                   </div>
@@ -171,9 +179,7 @@ const EventsPage = () => {
                     </button>
                   )}
                   {event.status === 'Próximo' && (
-                    <button className="btn-register secondary">
-                      Más Información
-                    </button>
+                    <button className="btn-register secondary">Más Información</button>
                   )}
                 </div>
               </div>
@@ -242,12 +248,10 @@ const EventsPage = () => {
           <div className="speaker-box">
             <h2>¿Quieres ser Speaker en Nuestros Eventos?</h2>
             <p>
-              Comparte tu experiencia y conocimiento con el ecosistema HealthTech.
-              Estamos buscando expertos en innovación, regulación, inversión y casos de éxito.
+              Comparte tu experiencia y conocimiento con el ecosistema HealthTech. Estamos buscando
+              expertos en innovación, regulación, inversión y casos de éxito.
             </p>
-            <button className="btn-speaker">
-              Postular como Speaker
-            </button>
+            <button className="btn-speaker">Postular como Speaker</button>
           </div>
         </div>
       </section>
@@ -258,8 +262,8 @@ const EventsPage = () => {
           <div className="events-cta-box">
             <h2>Mantente Informado</h2>
             <p>
-              Únete a nuestra comunidad y recibe notificaciones sobre próximos eventos,
-              workshops y oportunidades de networking
+              Únete a nuestra comunidad y recibe notificaciones sobre próximos eventos, workshops y
+              oportunidades de networking
             </p>
             <div className="cta-buttons">
               <a href="/miembros" className="btn-events-cta primary">

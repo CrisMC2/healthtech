@@ -37,8 +37,8 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className={`hero-description ${isVisible ? 'visible' : ''}`}>
-            HealthTech Perú conecta startups innovadoras, instituciones médicas, inversionistas
-            y reguladores para construir el futuro de la salud digital en el país.
+            HealthTech Perú conecta startups innovadoras, instituciones médicas, inversionistas y
+            reguladores para construir el futuro de la salud digital en el país.
           </p>
 
           {/* CTA Buttons */}

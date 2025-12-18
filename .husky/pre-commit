@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # Formatear código con Prettier
 npm run format:check || {
   echo "❌ Prettier check failed. Running prettier..."

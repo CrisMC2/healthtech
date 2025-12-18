@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Building2, Users, Heart, TrendingUp, Award, Zap } from 'lucide-react';
 import './StatsSection.css';
 
@@ -75,32 +75,7 @@ const StatsSection = () => {
     },
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated.current) {
-            setIsVisible(true);
-            hasAnimated.current = true;
-            animateCounters();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  const animateCounters = () => {
+  const animateCounters = useCallback(() => {
     stats.forEach((stat) => {
       let currentCount = 0;
       const increment = stat.value / 50; // 50 frames
@@ -119,7 +94,33 @@ const StatsSection = () => {
         }));
       }, stepTime);
     });
-  };
+  }, [stats]);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated.current) {
+            setIsVisible(true);
+            hasAnimated.current = true;
+            animateCounters();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, [animateCounters]);
 
   return (
     <section className="stats-section" ref={sectionRef}>
@@ -134,7 +135,7 @@ const StatsSection = () => {
           <span className="stats-badge">Impacto</span>
           <h2 className="stats-title">
             Transformando la salud con
-            <span className="stats-title-gradient">  resultados medibles</span>
+            <span className="stats-title-gradient"> resultados medibles</span>
           </h2>
           <p className="stats-description">
             Nuestro ecosistema está generando un impacto real en el sector salud del Perú

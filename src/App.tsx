@@ -13,14 +13,17 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 // Componente de carga mientras se cargan las páginas
 const LoadingFallback = () => (
-  <div className="loading-container" style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '60vh',
-    fontSize: '1.2rem',
-    color: '#666'
-  }}>
+  <div
+    className="loading-container"
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '60vh',
+      fontSize: '1.2rem',
+      color: '#666',
+    }}
+  >
     <div className="loading-spinner">Cargando...</div>
   </div>
 );
@@ -39,7 +42,10 @@ function App() {
               <Route path="/eventos" element={<EventsPage />} />
               <Route path="/miembros" element={<MembershipPage />} />
               <Route path="/contacto" element={<ContactPage />} />
-              <Route path="*" element={<div className="page-placeholder">Página no encontrada</div>} />
+              <Route
+                path="*"
+                element={<div className="page-placeholder">Página no encontrada</div>}
+              />
             </Routes>
           </Suspense>
         </main>

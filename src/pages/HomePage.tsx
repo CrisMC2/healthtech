@@ -20,7 +20,8 @@ const HomePage = () => {
           <p className="welcome-home-text">
             Nuestro país representa una gran oportunidad para la industria HealthTech. La necesidad
             de transformar el acceso y calidad de salud, el interés institucional de reguladores y
-            entidades públicas y privadas, hacen de nuestro ecosistema una plaza llena de oportunidades.
+            entidades públicas y privadas, hacen de nuestro ecosistema una plaza llena de
+            oportunidades.
           </p>
         </div>
       </section>
@@ -74,10 +75,7 @@ const HomePage = () => {
       {/* Directiva - Sección Expandible */}
       <section id="directiva" className="directiva-home-section">
         <div className="container">
-          <button
-            className="directiva-toggle"
-            onClick={() => setShowDirectiva(!showDirectiva)}
-          >
+          <button className="directiva-toggle" onClick={() => setShowDirectiva(!showDirectiva)}>
             <div className="directiva-toggle-content">
               <Users className="directiva-toggle-icon" />
               <div className="directiva-toggle-text">
@@ -91,11 +89,13 @@ const HomePage = () => {
           {showDirectiva && (
             <div className="directiva-content">
               <p className="directiva-intro">
-                Nuestra directiva está conformada por líderes del ecosistema HealthTech peruano,
-                con experiencia en emprendimiento, salud, tecnología e inversión.
+                Nuestra directiva está conformada por líderes del ecosistema HealthTech peruano, con
+                experiencia en emprendimiento, salud, tecnología e inversión.
               </p>
               <div className="directiva-note">
-                <p><em>La conformación de la directiva se actualizará próximamente.</em></p>
+                <p>
+                  <em>La conformación de la directiva se actualizará próximamente.</em>
+                </p>
               </div>
             </div>
           )}
@@ -109,8 +109,8 @@ const HomePage = () => {
             <span className="cta-badge">Únete al Ecosistema</span>
             <h2 className="cta-title">¿Listo para transformar la salud en Perú?</h2>
             <p className="cta-description">
-              Accede a networking, recursos exclusivos y oportunidades
-              para hacer crecer tu startup HealthTech.
+              Accede a networking, recursos exclusivos y oportunidades para hacer crecer tu startup
+              HealthTech.
             </p>
             <div className="cta-buttons">
               <a href="/miembros" className="btn-cta-primary">

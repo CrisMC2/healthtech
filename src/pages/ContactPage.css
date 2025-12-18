@@ -277,11 +277,21 @@
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
 }
 
-.social-card:nth-child(1) { border-top-color: #0077b5; }
-.social-card:nth-child(2) { border-top-color: #E4405F; }
-.social-card:nth-child(3) { border-top-color: #1DA1F2; }
-.social-card:nth-child(4) { border-top-color: #FF0000; }
-.social-card:nth-child(5) { border-top-color: #1877F2; }
+.social-card:nth-child(1) {
+  border-top-color: #0077b5;
+}
+.social-card:nth-child(2) {
+  border-top-color: #e4405f;
+}
+.social-card:nth-child(3) {
+  border-top-color: #1da1f2;
+}
+.social-card:nth-child(4) {
+  border-top-color: #ff0000;
+}
+.social-card:nth-child(5) {
+  border-top-color: #1877f2;
+}
 
 .social-icon {
   width: 60px;

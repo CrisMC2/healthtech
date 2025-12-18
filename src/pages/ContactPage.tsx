@@ -8,7 +8,7 @@ import {
   Twitter,
   Youtube,
   Facebook,
-  MessageSquare
+  MessageSquare,
 } from 'lucide-react';
 import { useState } from 'react';
 import './ContactPage.css';
@@ -19,13 +19,15 @@ const ContactPage = () => {
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -42,29 +44,29 @@ const ContactPage = () => {
       title: 'Email General',
       value: 'info@healthtechperu.com',
       description: 'Consultas generales y preguntas',
-      color: '#00a651'
+      color: '#00a651',
     },
     {
       icon: <Mail />,
       title: 'Afiliaciones',
       value: 'membresia@healthtechperu.com',
       description: 'Información sobre membresías',
-      color: '#00a651'
+      color: '#00a651',
     },
     {
       icon: <Mail />,
       title: 'Alianzas Estratégicas',
       value: 'alianzas@healthtechperu.com',
       description: 'Partnerships y colaboraciones',
-      color: '#00a651'
+      color: '#00a651',
     },
     {
       icon: <Phone />,
       title: 'Teléfono',
       value: '+51 999 999 999',
       description: 'Lunes a Viernes, 9am - 6pm',
-      color: '#00a651'
-    }
+      color: '#00a651',
+    },
   ];
 
   const socialMedia = [
@@ -73,44 +75,44 @@ const ContactPage = () => {
       icon: <Linkedin />,
       url: 'https://linkedin.com/company/healthtech-peru',
       color: '#0077b5',
-      description: 'Noticias profesionales del sector'
+      description: 'Noticias profesionales del sector',
     },
     {
       name: 'Instagram',
       icon: <Instagram />,
       url: 'https://instagram.com/healthtechperu',
       color: '#E4405F',
-      description: 'Contenido visual e historias'
+      description: 'Contenido visual e historias',
     },
     {
       name: 'Twitter/X',
       icon: <Twitter />,
       url: 'https://twitter.com/healthtechpe',
       color: '#1DA1F2',
-      description: 'Actualizaciones en tiempo real'
+      description: 'Actualizaciones en tiempo real',
     },
     {
       name: 'YouTube',
       icon: <Youtube />,
       url: 'https://youtube.com/@healthtechperu',
       color: '#FF0000',
-      description: 'Webinars y conferencias'
+      description: 'Webinars y conferencias',
     },
     {
       name: 'Facebook',
       icon: <Facebook />,
       url: 'https://facebook.com/healthtechperu',
       color: '#1877F2',
-      description: 'Comunidad y eventos'
-    }
+      description: 'Comunidad y eventos',
+    },
   ];
 
   const offices = [
     {
       name: 'Oficina Principal',
       address: 'San Isidro, Lima, Perú',
-      icon: <MapPin />
-    }
+      icon: <MapPin />,
+    },
   ];
 
   return (
@@ -120,7 +122,8 @@ const ContactPage = () => {
         <div className="container">
           <h1 className="contact-title">Contáctanos</h1>
           <p className="contact-subtitle">
-            Estamos aquí para responder tus preguntas y ayudarte a formar parte del ecosistema HealthTech
+            Estamos aquí para responder tus preguntas y ayudarte a formar parte del ecosistema
+            HealthTech
           </p>
         </div>
       </section>
@@ -138,13 +141,13 @@ const ContactPage = () => {
             {contactChannels.map((channel, index) => (
               <div key={index} className="channel-card">
                 <div className="channel-icon" style={{ backgroundColor: `${channel.color}15` }}>
-                  <div style={{ color: channel.color }}>
-                    {channel.icon}
-                  </div>
+                  <div style={{ color: channel.color }}>{channel.icon}</div>
                 </div>
                 <h3>{channel.title}</h3>
                 <a
-                  href={channel.icon.type === Mail ? `mailto:${channel.value}` : `tel:${channel.value}`}
+                  href={
+                    channel.icon.type === Mail ? `mailto:${channel.value}` : `tel:${channel.value}`
+                  }
                   className="channel-value"
                   style={{ color: channel.color }}
                 >
@@ -279,7 +282,8 @@ const ContactPage = () => {
           <div className="linkedin-priority">
             <Linkedin size={24} />
             <p>
-              <strong>LinkedIn</strong> es nuestro canal prioritario para contenido profesional y B2B
+              <strong>LinkedIn</strong> es nuestro canal prioritario para contenido profesional y
+              B2B
             </p>
           </div>
         </div>
@@ -292,9 +296,7 @@ const ContactPage = () => {
           <div className="office-grid">
             {offices.map((office, index) => (
               <div key={index} className="office-card">
-                <div className="office-icon">
-                  {office.icon}
-                </div>
+                <div className="office-icon">{office.icon}</div>
                 <h4>{office.name}</h4>
                 <p>{office.address}</p>
               </div>
@@ -308,9 +310,7 @@ const ContactPage = () => {
         <div className="container">
           <div className="contact-cta-box">
             <h2>¿Listo para Unirte al Ecosistema?</h2>
-            <p>
-              Descubre cómo ser parte de la transformación digital de la salud en el Perú
-            </p>
+            <p>Descubre cómo ser parte de la transformación digital de la salud en el Perú</p>
             <a href="/miembros" className="btn-contact-cta">
               Conoce las Membresías
             </a>

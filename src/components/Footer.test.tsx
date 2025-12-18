@@ -114,9 +114,7 @@ describe('Footer Component', () => {
 
   it('maneja errores al suscribirse al newsletter', async () => {
     vi.mocked(formService.validateEmail).mockReturnValue(true);
-    vi.mocked(formService.subscribeToNewsletter).mockRejectedValue(
-      new Error('Error de red')
-    );
+    vi.mocked(formService.subscribeToNewsletter).mockRejectedValue(new Error('Error de red'));
 
     renderFooter();
 

@@ -97,12 +97,24 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.vertical-card:nth-child(1) { border-top-color: #00a651; }
-.vertical-card:nth-child(2) { border-top-color: #00cc66; }
-.vertical-card:nth-child(3) { border-top-color: #9333ea; }
-.vertical-card:nth-child(4) { border-top-color: #ec4899; }
-.vertical-card:nth-child(5) { border-top-color: #f59e0b; }
-.vertical-card:nth-child(6) { border-top-color: #06b6d4; }
+.vertical-card:nth-child(1) {
+  border-top-color: #00a651;
+}
+.vertical-card:nth-child(2) {
+  border-top-color: #00cc66;
+}
+.vertical-card:nth-child(3) {
+  border-top-color: #9333ea;
+}
+.vertical-card:nth-child(4) {
+  border-top-color: #ec4899;
+}
+.vertical-card:nth-child(5) {
+  border-top-color: #f59e0b;
+}
+.vertical-card:nth-child(6) {
+  border-top-color: #06b6d4;
+}
 
 .vertical-icon-wrapper {
   width: 70px;
@@ -169,7 +181,7 @@
 }
 
 .vertical-examples li::before {
-  content: "✓";
+  content: '✓';
   position: absolute;
   left: 0;
   color: #00cc66;
@@ -285,8 +297,8 @@
 }
 
 .more-vertical-tag:hover {
-  border-color: #00CC66;
-  color: #00CC66;
+  border-color: #00cc66;
+  color: #00cc66;
   transform: translateY(-2px);
 }
 

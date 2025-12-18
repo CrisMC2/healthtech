@@ -1,0 +1,176 @@
+/* Global Styles - HealthTech Perú */
+
+/* CSS Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* HealthTech Brand Colors - Professional Palette */
+  --color-primary: #00a651;        /* Verde salud primario */
+  --color-primary-dark: #008a43;   /* Verde oscuro */
+  --color-secondary: #0077be;      /* Azul médico */
+  --color-accent: #00d4aa;         /* Verde aqua acento */
+  --color-danger: #e74c3c;         /* Rojo para urgencias */
+
+  /* Background Gradients */
+  --gradient-primary: linear-gradient(135deg, #005a32 0%, #00a651 50%, #00d4aa 100%);
+  --gradient-dark: linear-gradient(135deg, #0a2f1f 0%, #0d3d28 100%);
+  --gradient-hero: linear-gradient(135deg, #0a2f1f 0%, #005a32 50%, #00a651 100%);
+
+  /* Grays */
+  --color-gray-50: #f8fafb;
+  --color-gray-100: #f1f5f7;
+  --color-gray-200: #e4ebef;
+  --color-gray-300: #d1dce3;
+  --color-gray-400: #9fb3c0;
+  --color-gray-500: #6b8291;
+  --color-gray-600: #4a5f6d;
+  --color-gray-700: #354552;
+  --color-gray-800: #1f2d38;
+  --color-gray-900: #0f1922;
+
+  /* Typography */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-display: swap;
+
+  /* Font Smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* Transitions */
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.16);
+  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.20);
+
+  /* Spacing */
+  --spacing-section: 100px;
+  --spacing-section-mobile: 60px;
+}
+
+/* Base Elements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--color-gray-800);
+  background-color: white;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-gray-900);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-gray-600);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-normal);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
